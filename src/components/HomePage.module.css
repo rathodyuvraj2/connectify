@@ -1,0 +1,17 @@
+/* src/pages/HomePage.module.css */
+.homePage {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .welcome {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .logoutButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

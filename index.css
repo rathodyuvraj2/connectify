@@ -1,0 +1,8 @@
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    line-height: normal;
+    font-family: 'Inter', sans-serif; /* Apply the font globally */
+}
