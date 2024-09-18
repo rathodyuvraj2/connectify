@@ -12,7 +12,7 @@ const SECRET_KEY = 'supersecretkey';
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(cors({ origin: 'http://localhost:5173', credentials: true }));
 app.use(cookieParser());
 
 // Connect to MongoDB
@@ -100,6 +100,12 @@ app.get('/api/user', authenticateToken, async (req, res) => {
   if (!user) return res.sendStatus(404);
   
   res.json({ username: user.email }); // or any other user details
+});
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
 
 // Start the server
